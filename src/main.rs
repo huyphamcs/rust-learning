@@ -1,18 +1,13 @@
 fn main() {
-    println!("{}", add(1,2));
-    println!("Factorial: {}", factorial(2))
+    use std::string::String;
+    let str: &mut String = &mut String::from("Hello World");
+    println!("{}", str);
+    str.push_str("HAHAHA");
+    println!("{}", calculate_length(str.to_string()));
+    println!("{}", str);
+
 }
 
-
-fn add (a: u64, b: u64)-> u64 {
-    return a+b;
-}
-
-
-
-fn factorial (n: u64) -> u64{
-    if n<=2 {
-        return n;
-    }
-    return n*factorial(n-1);
+fn calculate_length (str: String) -> usize {
+    return str.len();
 }
