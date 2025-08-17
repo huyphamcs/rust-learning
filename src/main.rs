@@ -1,23 +1,11 @@
-fn main () {
-    print_numbers(10);
-}
-fn print_numbers(n: usize) {
-    
-    // Solution 1
-    // let mut i = 0;
-    // loop {
-    //     println!("{i}");
-    //     i += 1;
-    //     if i == n {break;}
-    // }
-    // Solution 2
-    // let mut i = 0;
-    // while i<n {
-    //     println!("{i}");
-    //     i += 1;
-    // }
-    // Solution 3
-    for i in 0..10 {
-        println!("{i}");
-    }
+use std::collections::HashMap;
+fn main() {
+    let solar_distance = HashMap::from([
+        ("Mercury", 0.4),
+        ("Venus", 0.7),
+        ("Earth", 1.0),
+        ("Mars", 1.5),
+    ]);
+
+    print!("{:?}", solar_distance);
 }
